@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = 'KAFoundations provide components to expedite app production'
+  s.description  = 'KAFoundations provide components to expedite app production.  One major component is the DatasourceController that allows developers to quickly construct a list view by plugging in a custom Datasource object. In addition, this pod includes helper methods that you can use to anchor views very easily without having to type too much.'
 
   s.homepage     = "https://github.com/KellyAyo/KAFoundations"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/KellyAyo/KAFoundations.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/KellyAyo/KAFoundations.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +90,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "KAFoundations/**/*"
+  s.swift_version = '4.1'
+
+  s.source_files  = "KAFoundations/**/*.swift"
   #s.source_files  = "KAFoundations", "KAFoundations/**/*.{h,m}"
   #s.exclude_files = "Classes/Exclude"
 
